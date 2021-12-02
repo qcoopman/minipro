@@ -3,6 +3,7 @@ from typing import Dict
 from kedro.pipeline import Pipeline
 from minipro.pipelines import data_preparation as dp
 
+
 def register_pipelines() -> Dict[str, Pipeline]:
     """
     Registers the project's pipelines

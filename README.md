@@ -4,6 +4,7 @@
 
 ## Structure of the code
 The structure of the code in this repo is based on the [cookiecutter](https://drivendata.github.io/cookiecutter-data-science/) model.
+```
     ├── README.md                               <- Top-level README for developers using this project
     ├── data/                                   <- Can be used to store local project data (not commited to version control)
     ├── docs/                                   <- Project documentation
@@ -24,6 +25,7 @@ The structure of the code in this repo is based on the [cookiecutter](https://dr
     ├── .ipython                                <- IPython startup scripts
     ├── .gitignore                              <- Prevent staging of unnecessary files to `git`
     ├── pyproject.toml                          <- Identifies the project root and contains [configuration information](https://kedro.readthedocs.io/en/latest/11_faq/02_architecture_overview.html#kedro-yml)
+```
 
 ## Usage
 
@@ -33,7 +35,7 @@ kedro run
 ```
 
 Have a look at the file `src/tests/test_run.py` for instructions on how to write your tests. 
-You can run your tests as follows:g
+You can run your tests as follows:
 ```
 kedro test
 ```

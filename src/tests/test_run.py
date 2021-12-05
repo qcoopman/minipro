@@ -44,9 +44,7 @@ from kedro.framework.context import KedroContext
 
 @pytest.fixture
 def project_context():
-    return KedroContext(
-        package_name="minipro", project_path=Path.cwd()
-    )
+    return KedroContext(package_name="minipro", project_path=Path.cwd())
 
 
 # The tests below are here for the demonstration purpose

@@ -61,7 +61,7 @@ def preprocess(data_dir: str) -> pd.DataFrame:
             & ~df["re_ice"].isna()
             & (df["nb_ice"] != 0.0)
             & (df["nb_liq"] != 0.0)
-            & (df["area"] > 100)
+            & (df["area"] > 50)
             & (df["tau"] > 1.0)
             & (df["size_pocket_ice"] != df["area"])
             & (df["size_pocket_liq"] != df["area"])

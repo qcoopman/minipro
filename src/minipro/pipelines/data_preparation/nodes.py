@@ -18,13 +18,13 @@ def preprocess(data_dir: str) -> pd.DataFrame:
     # Columns of each data file
     COL_NAMES = [
         "date",
-        "area",
-        "tau",
-        "std_tau",
-        "re",
-        "std_re",
-        "ctt",
-        "std_ctt",
+        "area",                 # Cloud area
+        "tau",                  # Cloud optical depth
+        "std_tau",              # Standard deviation tau
+        "re",                   # Hydrometeor effective radius
+        "std_re",               # Std re
+        "ctt",                  # Cloud top temperature
+        "std_ctt",              #
         "cth_mp",
         "std_cth",
         "perim",

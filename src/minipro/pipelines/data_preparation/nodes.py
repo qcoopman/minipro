@@ -8,7 +8,8 @@ def preprocess(data_dir: str) -> pd.DataFrame:
     """
     Reads all data files found in an input DATA_DIR and filters out malformed
     data points. Each file represents all satellite measurements of clouds in
-    a given day. Each data point contains 28 columns
+    a given day over the Southern Ocean from 2005 to 2017. Each data point has
+    28 columns
     Args:
         data_dir: Folder that contains all data files
     Returns:
@@ -59,7 +60,11 @@ def preprocess(data_dir: str) -> pd.DataFrame:
             ~df["re_liq"].isna()
             & ~df["re_ice"].isna()
             & (df["nb_ice"] != 0.0)
-            & (df["nb_ice"] != 0.0)
+            & (df["nb_liq"] != 0.0)
+            & (df["area"] > 100)
+            & (df["tau"] > 1.0)
+            & (df["size_pocket_ice"] != df["area"])
+            & (df["size_pocket_liq"] != df["area"])
         ]
         # Adjust the value of two columns
         df["re_liq"] = df["re_liq"] * 10 ** 6

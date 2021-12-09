@@ -1,15 +1,16 @@
 """ Nodes for the data_preparation pipeline """
 import pandas as pd
 from pathlib import Path
-import datetime
 
 
 def preprocess(data_dir: str) -> pd.DataFrame:
     """
     Reads all data files found in an input DATA_DIR and filters out malformed
     data points. Each file represents all satellite measurements of clouds in
-    a given day over the Southern Ocean from 2005 to 2017. Each data or line represents one cloud object (Connected cloudy pixels from CLAAS-2 dataset,  https://doi.org/10.5676/EUM_SAF_CM/CLAAS/V002). Each data point has
-    28 columns
+    a given day over the Southern Ocean from 2005 to 2017. Each data or line
+    represents one cloud object (a set of connected cloudy pixels from CLAAS-2
+    dataset, https://doi.org/10.5676/EUM_SAF_CM/CLAAS/V002). Each data point
+    has 28 columns
     Args:
         data_dir: Folder that contains all data files
     Returns:
@@ -18,33 +19,59 @@ def preprocess(data_dir: str) -> pd.DataFrame:
     # Columns of each data file
     COL_NAMES = [
         "date",
-        "area",                 # Cloud area
-        "tau",                  # Cloud optical depth
-        "std_tau",              # Standard deviation tau
-        "re",                   # Hydrometeor effective radius
-        "std_re",               # Std re
-        "ctt",                  # Cloud top temperature
-        "std_ctt",              # Standad deviation ctt
-        "cth_mp",               # Cloud top height
-        "std_cth",              # Std CTH
-        "perim",                # Cloud perimeter
-        "nb_ice",               # Number of ice pixels
-        "nb_liq",               # Number of liquid pixels
-        "re_liq",               # Mean effective radius of liquid cloud droplets
-        "re_ice",               # Mean effective radius of ice crytals
+        # Area of the cloud
+        "area",
+        # Cloud optical depth
+        "tau",
+        # Standard deviation tau
+        "std_tau",
+        # Hydrometeor effective radius
+        "re",
+        # Std re
+        "std_re",
+        # Cloud top temperature
+        "ctt",
+        # Standad deviation ctt
+        "std_ctt",
+        # Cloud top height
+        "cth_mp",
+        # Std CTH
+        "std_cth",
+        # Cloud perimeter
+        "perim",
+        # Number of ice pixels
+        "nb_ice",
+        # Number of liquid pixels
+        "nb_liq",
+        # Mean effective radius of liquid cloud droplets
+        "re_liq",
+        # Mean effective radius of ice crytals
+        "re_ice",
         "off",
-        "nb_pocket_ice",        # Number of ice pockets (cluster of ice pixels) within the cloud
-        "size_pocket_ice",      # Mean size of ice pockets
-        "size_pocket_std_ice",  # Standard deviation of ice pocket size
-        "nb_pocket_liq",        # Number of liquid pokets (cluster of liquid pocket) within the cloud
-        "size_pocket_liq",      # Mean size of liquid pockets
-        "size_pocket_std_liq",  # Standard deviation of liquid pocket size
-        "tau_liq",              # Mean optical thickness of liquid pixels
-        "tau_ice",              # Mean optical thickness of ice pixels
-        "lon",                  # Mean longitude of cloud object
-        "lat",                  # Mean latitude of cloud object
-        "min_ctt",              # Minimum of cloud top temperature
-        "max_ctt",              # Maximum of cloud top temperature
+        # Number of ice pockets (cluster of ice pixels) within the cloud
+        "nb_pocket_ice",
+        # Mean size of ice pockets
+        "size_pocket_ice",
+        # Standard deviation of ice pocket size
+        "size_pocket_std_ice",
+        # Number of liquid pockets (cluster of liquid pockets) within the cloud
+        "nb_pocket_liq",
+        # Mean size of liquid pockets
+        "size_pocket_liq",
+        # Standard deviation of liquid pocket size
+        "size_pocket_std_liq",
+        # Mean optical thickness of liquid pixels
+        "tau_liq",
+        # Mean optical thickness of ice pixels
+        "tau_ice",
+        # Mean longitude of cloud object
+        "lon",
+        # Mean latitude of cloud object
+        "lat",
+        # Minimum of cloud top temperature
+        "min_ctt",
+        # Maximum of cloud top temperature
+        "max_ctt",
     ]
 
     # Retrieve a list of the paths of all data files

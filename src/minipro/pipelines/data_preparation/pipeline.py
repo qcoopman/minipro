@@ -13,7 +13,7 @@ def create_pipeline(**kwargs):
         [
             node(
                 preprocess,
-                inputs=["params:raw_data_dir"],
+                inputs=["params:raw_data_dir_mps", "params:raw_data_dir_era"],
                 outputs="P_clouds",
                 name="preprocess",
             )

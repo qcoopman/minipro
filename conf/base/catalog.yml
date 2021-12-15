@@ -1,3 +1,28 @@
 P_clouds:
   type: pandas.ParquetDataSet
   filepath: "data/02_intermediate/clouds.parquet"
+
+P_clouds_trn_x:
+  type: pandas.ParquetDataSet
+  filepath: "data/03_primary/clouds_trn_x.parquet"
+
+P_clouds_trn_y:
+  type: pandas.ParquetDataSet
+  filepath: "data/03_primary/clouds_trn_y.parquet"
+
+P_clouds_tst_x:
+  type: pandas.ParquetDataSet
+  filepath: "data/03_primary/clouds_tst_x.parquet"
+
+P_clouds_tst_y:
+  type: pandas.ParquetDataSet
+  filepath: "data/03_primary/clouds_tst_y.parquet"
+
+chart:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/chart.png
+
+model:
+  type: kedro.extras.datasets.pickle.PickleDataSet
+  filepath: "data/07_model_output/model.pkl"
+  backend: pickle

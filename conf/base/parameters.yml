@@ -1,6 +1,7 @@
 raw_data_dir_mps: "data/01_raw/mps/"
 raw_data_dir_era: "data/01_raw/era/"
 tst_data_pct: 0.15
+mlflow_experiment: "081221"
 model:
   n_estimators: 1000
   max_depth: 7

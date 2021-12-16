@@ -16,11 +16,7 @@ P_clouds_tst_x:
 
 P_clouds_tst_y:
   type: pandas.ParquetDataSet
-  filepath: "data/03_primary/clouds_tst_y.parquet"
-
-chart:
-  type: matplotlib.MatplotlibWriter
-  filepath: data/08_reporting/chart.png
+  filepath: "data/03_primary/clouds_tst_y.parquet" 
 
 model:
   type: kedro.extras.datasets.pickle.PickleDataSet

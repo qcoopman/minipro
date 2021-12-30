@@ -1,10 +1,11 @@
 # minipro
 
 ## Overview
-The thermodynamic phase transition of clouds is still not well understood, therefore, the partitioning of ice and liquid in mixed phase clouds is often misrepresented in numerical models. 
-Clouds processes represent the highest incertitude in current models to predict the future climate so the effects of cloud thermodynamic phase are important to determine the amplitude of global warming.
-We use 12 years of cloud observations from the geostationary Spinning Enhanced Visible and InfraRed Imager (SEVIRI), CLAAS-2 dataset (https://doi.org/10.5676/EUM_SAF_CM/CLAAS/V002), over the Southern Ocean to detect clouds which contain both liquid and ice pixels at their tops and we retrieve microphysical and radiative properties in each cloud object. We collocate cloud properties with meteorological parameters from reanalysis from ERA-5. 
-The project analyse the distribution of pockets of liquid and ice within mixed-phase clouds via a gradient boosting regression tree method. The study aims to understand which parameters potentially impact the formation and multiplication of ice pockets when clouds transition from liquid to ice.
+Numerical models struggle to predict our future climate because clouds glaciate too efficiently in such a way that the partitioning of cloud thermodynamic phase is misrepresented in global climate models. The isotherms rise in a warming climate leading to a replacement of ice clouds by liquid clouds. This effect increases the reflectivity of clouds to sunlight since cloud droplets are smaller and more numerous than ice crystals for a fixed water content. This project aims for developing a method to improve our understanding on cloud thermodynamic phase partitioning within mixed phase clouds.
+
+Twelve years of cloud observations from the geostationary space-based instrument Spinning Enhanced Visible and InfraRed Imager are collocated with reanalysis from ERA-5 over the Southern Ocean. The project focusses on mixed phase clouds so we only keep clouds consisting of both liquid and ice pixels. The dataset contains radiative and microphysical cloud properties associated with meteorological parameter.
+
+The distributions of liquid and ice pockets within mixed phase clouds are analyzed through a gradient boosting regression tree method. The relative impact of each parameter on the thermodynamic phase distribution is highlighted considering non-linear relations. This work would potentially improve climate models by providing new parametrizations to represent the thermodynamic phase of cloud.   
 
 ## Structure of the code
 The structure of the code in this repo is based on the [cookiecutter](https://drivendata.github.io/cookiecutter-data-science/) model.

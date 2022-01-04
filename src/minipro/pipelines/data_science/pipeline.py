@@ -19,11 +19,13 @@ def create_pipeline(**kwargs):
             ),
             node(
                 predict_and_evaluate,
-                inputs=["P_clouds_tst_x", "P_clouds_tst_y", "model"],
-                outputs={
-                    "chart_feat_importance": "chart_feat_importance",
-                    "chart_var_correlation": "chart_var_correlation",
-                },
+                inputs=[
+                    "P_clouds_tst_x",
+                    "P_clouds_tst_y",
+                    "model",
+                    "params:mlflow_experiment",
+                ],
+                outputs=None,
                 name="predict_and_evaluate",
             ),
         ]

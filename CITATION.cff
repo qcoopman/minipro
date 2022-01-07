@@ -8,6 +8,6 @@ authors:
   given-names: "Santiago"
 title: "minipro"
 version: 1.0.0
-doi: 10.5281/zenodo.1234
+doi:
 date-released: 2021-12-30
 url: "https://github.com/qcoopman/minipro"

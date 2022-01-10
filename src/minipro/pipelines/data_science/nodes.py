@@ -46,8 +46,7 @@ def predict_and_evaluate(
     and compute the mean squared error (MSE). It logs the hyperparameters of
     the model, its MSE score on the test set, and two plots to MLFlow:
         A feature importance plot for the trained XGBoost regression model 
-        A variable correlation plot for the trained XGBoost regression model 
-    XGBoost regression model)
+        A variable correlation plot for the trained XGBoost regression model
     Args:
         p_clouds_tst_x: Input variables of our test set
         p_clouds_tst_y: Variable to predict in our test set
